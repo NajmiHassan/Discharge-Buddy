@@ -39,15 +39,11 @@ export default function LoginPage() {
         setError(signInError);
       }
     } else {
-      const { error: signUpError, needsConfirmation } = await signUp(email, password);
+      const { error: signUpError } = await signUp(email, password);
       if (signUpError) {
         setError(signUpError);
-      } else if (needsConfirmation) {
-        setSuccessMessage(
-          "Account created. Click the confirmation link we emailed you — you can't sign in until you do.",
-        );
       } else {
-        setSuccessMessage("Account created! You can sign in now.");
+        setSuccessMessage("Account created! Check your email to confirm, or try signing in.");
       }
     }
 
