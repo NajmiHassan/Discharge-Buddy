@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* ===== Discharge Buddy — Design System ===== */
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-heading: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Brand palette */
+  --color-navy: #1B2A4A;
+  --color-teal: #4A9E8E;
+  --color-amber: #E8A838;
+  --color-red: #D14B4B;
+
+  /* Neutrals */
+  --color-white: #FFFFFF;
+  --color-cream: #F8F6F3;
+  --color-dark: #1A1A1A;
+
+  /* Semantic aliases */
+  --color-primary: #1B2A4A;
+  --color-success: #4A9E8E;
+  --color-warning: #E8A838;
+  --color-danger: #D14B4B;
+  --color-surface: #F8F6F3;
+  --color-foreground: #1A1A1A;
+  --color-muted: #1B2A4A / 0.6;
+}
+
+/* Base resets */
+html {
+  font-size: 18px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  color: #1A1A1A;
+  background: #FFFFFF;
+  line-height: 1.5;
+}
+
+/* Ensure large touch targets */
+button, a, input, select, textarea {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+/* Accessibility: visible focus ring */
+*:focus-visible {
+  outline: 2px solid #1B2A4A;
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
