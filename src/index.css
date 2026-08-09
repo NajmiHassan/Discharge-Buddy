@@ -1,65 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Noto+Sans:wght@300;400;500;700&display=swap');
 @import "tailwindcss";
 
+/* ===== Discharge Buddy — Design System ===== */
+
 @theme {
-  --font-sans: "Noto Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-heading: "Figtree", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-heading: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
-  --color-primary: #0D9488;
-  --color-on-primary: #FFFFFF;
-  --color-secondary: #CCFBF1;
-  --color-accent: #16A34A;
-  --color-warning: #D97706;
-  --color-success: #16A34A;
-  --color-background: #F8FAFC;
-  --color-foreground: #1E293B;
-  --color-muted: #F1F5F9;
-  --color-border: #E2E8F0;
-  --color-destructive: #DC2626;
-  --color-ring: #0D9488;
+  /* Brand palette */
+  --color-navy: #1B2A4A;
+  --color-teal: #4A9E8E;
+  --color-amber: #E8A838;
+  --color-red: #D14B4B;
 
-  --radius-card: 0.75rem;
-  --radius-btn: 0.5rem;
+  /* Neutrals */
+  --color-white: #FFFFFF;
+  --color-cream: #F8F6F3;
+  --color-dark: #1A1A1A;
+
+  /* Semantic aliases */
+  --color-primary: #1B2A4A;
+  --color-success: #4A9E8E;
+  --color-warning: #E8A838;
+  --color-danger: #D14B4B;
+  --color-surface: #F8F6F3;
+  --color-foreground: #1A1A1A;
+  --color-muted: #1B2A4A / 0.6;
 }
 
-/* Base styles */
+/* Base resets */
 html {
+  font-size: 18px;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
-  @apply bg-background text-foreground font-sans antialiased;
-  min-height: 100dvh;
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  color: #1A1A1A;
+  background: #FFFFFF;
+  line-height: 1.5;
 }
 
-/* Status color utilities */
-.status-track { @apply text-success; }
-.status-concern { @apply text-warning; }
-.status-critical { @apply text-destructive; }
+/* Ensure large touch targets */
+button, a, input, select, textarea {
+  font-size: inherit;
+  font-family: inherit;
+}
 
-/* Touch target minimum */
-.touch-target { @apply min-h-[44px] min-w-[44px]; }
-
-/* Smooth transitions */
-a, button, .btn { @apply transition-all duration-150 ease-out; }
-
-/* For screen readers */
-.sr-only {
-  position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+/* Accessibility: visible focus ring */
+*:focus-visible {
+  outline: 2px solid #1B2A4A;
+  outline-offset: 2px;
 }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }

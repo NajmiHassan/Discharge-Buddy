@@ -9,19 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@speechmatics/browser-audio-input": "^2.0.4",
-    "@speechmatics/real-time-client": "^8.5.1",
-    "@supabase/supabase-js": "^2.112.2",
+    "@supabase/supabase-js": "^2.112.1",
     "@tailwindcss/vite": "^4.1.18",
-    "@types/uuid": "^10.0.0",
-    "lucide-react": "^1.29.0",
-    "pdfjs-dist": "^6.2.108",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-dropzone": "^20.0.0",
     "react-router-dom": "^7.18.2",
-    "tailwindcss": "^4.1.18",
-    "uuid": "^14.0.1"
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
     "@types/node": "^24.10.1",
