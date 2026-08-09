@@ -1,0 +1,36 @@
+{
+  "name": "my-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite optimize && vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@speechmatics/browser-audio-input": "^2.0.4",
+    "@speechmatics/real-time-client": "^8.5.1",
+    "@supabase/supabase-js": "^2.112.2",
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/uuid": "^10.0.0",
+    "lucide-react": "^1.29.0",
+    "pdfjs-dist": "^6.2.108",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-dropzone": "^20.0.0",
+    "react-router-dom": "^7.18.2",
+    "tailwindcss": "^4.1.18",
+    "uuid": "^14.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^5.1.1",
+    "globals": "^16.5.0",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.4",
+    "vite-plugin-svgr": "^4.5.0"
+  }
+}
